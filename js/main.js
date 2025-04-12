@@ -37,6 +37,12 @@ function formatHours(hours) {
      return hours === 1 ? "1hr" : `${hours}hrs`;
 }
 
+const previousText = {
+     daily: "Yesterday - ",
+     weekly: "Last Week - ",
+     monthly: "Last Month - "
+}
+
 trackOption.addEventListener('click', (event) => {
      if (!event.target.matches("p")) return;
 
@@ -50,6 +56,6 @@ trackOption.addEventListener('click', (event) => {
 
      for (let i = 0; i < timeElements.length; i++) {
           timeElements[i].current.textContent = formatHours(myData.items[i].timeframes[timeframe].current);
-          timeElements[i].previous.textContent = formatHours(myData.items[i].timeframes[timeframe].previous);
+          timeElements[i].previous.textContent = previousText[timeframe] + formatHours(myData.items[i].timeframes[timeframe].previous);
      }
 });
