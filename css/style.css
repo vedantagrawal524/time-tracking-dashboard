@@ -6,7 +6,323 @@
   box-sizing: border-box;
 }
 
+:root {
+  --Purple1: hsl(246, 80%, 60%);
+
+  --Orange: hsl(15, 100%, 70%);
+  --Blue: hsl(195, 74%, 62%);
+  --Pink: hsl(348, 100%, 68%);
+  --Green: hsl(145, 58%, 55%);
+  --Purple2: hsl(264, 64%, 52%);
+  --Yellow: hsl(43, 84%, 65%);
+
+  --Purple3: hsl(235, 45%, 61%);
+  --Navy1: hsl(226, 43%, 10%);
+  --Navy2: hsl(235, 46%, 20%);
+  --Navy3: hsl(236, 100%, 87%);
+}
+
 html {
   font-family: "Rubik", sans-serif;
   font-size: 18px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--Navy1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard {
+  justify-content: center;
+  align-self: center;
+  max-width: 55em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.7em 1.5em;
+  margin: 2em;
+  grid-template-areas:
+    "profile work play study"
+    "profile exercise social care";
+}
+
+.profile {
+  grid-area: profile;
+  border-radius: 0.8em;
+  background-color: var(--Navy2);
+  overflow: hidden;
+  height: 97%;
+}
+
+/* Top part */
+.user {
+  background-color: var(--Purple1);
+  padding: 1.6rem;
+  border-radius: 0.8em;
+  text-align: left;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.user img {
+  width: 4em;
+  height: auto;
+  border: 0.1em solid white;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.message {
+  font-size: 0.7rem;
+  color: var(--Navy3);
+}
+
+.name {
+  color: white;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.1em;
+  margin-top: 0.2rem;
+}
+
+/* Bottom part */
+.menu {
+  height: 35%;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1em;
+}
+
+.menu p {
+  font-size: 0.9em;
+  color: var(--Purple3);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu p:hover,
+.menu p:active,
+.menu p.active {
+  color: white;
+}
+
+/* Card */
+.card {
+  border-radius: 0.8em;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-bg {
+  height: 3em;
+  border-radius: 0.8em 0.8em 0 0;
+  background-repeat: no-repeat;
+  background-position: top right 1em;
+  background-size: 3.8em;
+}
+
+.card-content {
+  background-color: var(--Navy2);
+  padding: 1.5em;
+  color: white;
+  border-radius: 0.8em;
+  position: relative;
+  top: -0.9em;
+  z-index: 1;
+}
+.card-content:hover {
+  background-color: hsl(235, 45%, 30%);
+  cursor: pointer;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2em;
+}
+
+.card-header h4 {
+  font-weight: 500;
+  font-size: 0.9em;
+  color: whitesmoke;
+}
+
+.dots {
+  width: 0.8em;
+  height: auto;
+  cursor: pointer;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.card-body h2 {
+  font-size: 2.5em;
+  font-weight: 350;
+  color: white;
+}
+
+.card-body p {
+  color: var(--Purple3);
+  font-size: 0.8em;
+}
+
+.current-time,
+.previous-time {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.work {
+  grid-area: work;
+}
+.work .card-bg {
+  background-color: var(--Orange);
+  background-image: url("/images/icon-work.svg");
+}
+
+.play {
+  grid-area: play;
+}
+.play .card-bg {
+  background-color: var(--Blue);
+  background-image: url("/images/icon-play.svg");
+}
+
+.study {
+  grid-area: study;
+}
+.study .card-bg {
+  background-color: var(--Pink);
+  background-image: url("/images/icon-study.svg");
+}
+
+.exercise {
+  grid-area: exercise;
+}
+.exercise .card-bg {
+  background-color: var(--Green);
+  background-image: url("/images/icon-exercise.svg");
+}
+
+.social {
+  grid-area: social;
+}
+.social .card-bg {
+  background-color: var(--Purple2);
+  background-image: url("/images/icon-social.svg");
+}
+
+.care {
+  grid-area: care;
+}
+.care .card-bg {
+  background-color: var(--Yellow);
+  background-image: url("/images/icon-self-care.svg");
+}
+
+@media screen and (max-width: 820px) {
+  .html {
+    font-size: 17px;
+  }
+  .name {
+    font-size: 1.6rem;
+  }
+  .card-header h4 {
+    font-size: 0.8em;
+  }
+  .card-body h2 {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "profile"
+      "work"
+      "play"
+      "study"
+      "exercise"
+      "social"
+      "care";
+  }
+
+  /* Top part */
+  .user {
+    padding: 1.6rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+  }
+
+  .user img {
+    width: 3.8em;
+    margin-bottom: 0rem;
+  }
+
+  .message {
+    font-size: 0.8rem;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+
+  /* Bottom part */
+  .menu {
+    padding: 1.4rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu p {
+    font-size: 1em;
+  }
+
+  /* Card */
+  .card-header {
+    margin-bottom: 1em;
+  }
+
+  .dots {
+    width: 1em;
+  }
+
+  .card-body {
+    gap: 0em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .html {
+    font-size: 15px;
+  }
+  .name {
+    font-size: 1.3rem;
+  }
+  .menu p {
+    font-size: 0.8em;
+  }
+  .card-body h2 {
+    font-size: 1.5em;
+  }
+  .card-body p {
+    font-size: 0.7em;
+  }
 }
