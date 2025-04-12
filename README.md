@@ -1,19 +1,63 @@
-# Time tracking dashboard
+# 🕒 Time Tracking Dashboard
 
-- Purple 600: hsl(246, 80%, 60%)
+This is a solution to the [Time Tracking Dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). It helps you improve your coding skills by building realistic projects. This project features a time tracking dashboard with daily, weekly, and monthly statistics.
 
-- Orange 300 (work): hsl(15, 100%, 70%)
-- Blue 300 (play): hsl(195, 74%, 62%)
-- Pink 400 (study): hsl(348, 100%, 68%)
-- Green 400 (exercise): hsl(145, 58%, 55%)
-- Purple 700 (social): hsl(264, 64%, 52%)
-- Yellow 300 (self care): hsl(43, 84%, 65%)
+---
 
-### Neutral
+## 📋 Table of Contents
 
-- Navy 950: hsl(226, 43%, 10%)
-- Navy 900: hsl(235, 46%, 20%)
-- Purple 500: hsl(235, 45%, 61%)
-- Navy 200: hsl(236, 100%, 87%)
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Live Links](#live-links)
+  - [Built With](#built-with)
+- [Author](#author)
 
-- Weights: 300, 400, 500
+---
+
+## Overview
+
+The Time Tracking Dashboard allows users to:
+
+- View the optimal layout for the site depending on their device's screen size.
+- See hover states for all interactive elements on the page.
+- Switch between viewing daily, weekly, and monthly stats.
+
+### Screenshot
+
+#### 🖥️ Desktop View
+
+![Desktop Design](./design/desktop-design.jpg)
+
+#### 📱 Mobile View
+
+![Mobile Design](./design/mobile-design.jpg)
+
+---
+
+### Live Links
+
+- 📁 GitHub Repository: [Time Tracking Dashboard](https://github.com/vedantagrawal524/time-tracking-dashboard)
+- 🌐 Live Site: [https://time-tracking-dashboard524.vercel.app/](https://time-tracking-dashboard524.vercel.app/)
+
+---
+
+### Built With
+
+- HTML5
+- CSS3
+- Flexbox
+- CSS Grid
+- JavaScript (Vanilla)
+- [Vercel](https://vercel.com/) – for deployment
+
+---
+
+## Author
+
+- Portfolio – _Vedant Agrawal_
+- Frontend Mentor – [@vedantagrawal524](https://www.frontendmentor.io/profile/vedantagrawal524)
+- GitHub – [@vedantagrawal524](https://github.com/vedantagrawal524)
+
+---
+
+📌 _If you like this project, feel free to fork it, star it ⭐, or suggest improvements. Happy Coding!_
